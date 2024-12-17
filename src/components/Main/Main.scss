@@ -1,0 +1,55 @@
+@use "../../assets/scss/abstract/mixins" as mixins;
+@use "../../assets/scss/abstract/variables" as variable;
+
+.main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "main__container-content main__container-sidebar";
+
+    @include mixins.respond("lg") {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+                            "main__container-content"
+                            "main__container-sidebar";
+    }
+
+    &__container-content {
+        grid-area: main__container-content;
+    }
+
+    &__container-sidebar {
+        grid-area: main__container-sidebar;
+        padding: 2rem;
+        border-left: 3px solid variable.$greenEVM;
+
+        @include mixins.respond("lg") {
+            border-left: none;
+            border-top: 3px solid variable.$greenEVM;
+        }
+    }
+
+    &__container-sidebar-single-menu {
+        margin-bottom: 2rem;
+        border-bottom: 3px solid variable.$greenEVM;
+    }
+
+    
+    &__container-sidebar-single-menu--button {
+        padding-bottom: 5rem;
+    }
+
+    &__sidebar-single-menu-wrapper-icon {
+        text-align: center;
+        padding: 2rem;
+    }
+
+    &__sidebar-menu-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    &__sidebar-menu-title {
+        margin-bottom: 5rem;
+    }
+
+}

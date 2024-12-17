@@ -1,0 +1,29 @@
+@use "../../assets/scss/abstract/mixins" as mixins;
+@use "../../assets/scss/abstract/variables" as variable;
+
+.header {
+    height: auto;
+    min-height: 30vh;
+    overflow: hidden;
+    border-bottom: 3px solid variable.$greenEVM;
+
+    @include mixins.respond("md") {
+        min-height: 50vh;
+    }
+
+    &__container-nav {}
+
+    &__container-title {
+        text-align: center;
+        margin: 5rem auto;
+
+        @include mixins.respond("md") {
+            margin: 5rem auto;
+        }
+    }
+
+    &__logo {
+        width: 20rem;
+        height: 15rem;
+    }
+}

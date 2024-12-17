@@ -1,0 +1,47 @@
+@use "../../assets/scss/abstract/variables" as variable;
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    border-top: 3px solid variable.$greenEVM;
+    border-bottom: 3px solid variable.$greenEVM;
+
+    &__container-logo {
+        margin-bottom: 2rem;
+    }
+
+    &__logo {
+        width: 20rem;
+    }
+
+    &__container-social {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    &__social-icon {
+        width: 60px;
+        height: 60px;
+        padding-top: 1rem;
+    }
+    
+    &__container-content {
+        text-align: center;
+    }
+
+    &__link-cookie-policy {
+        margin-right: 2rem;
+    }
+
+    &__link-privacy-policy {
+        margin-left: 2rem;
+    }
+
+    &__heart {
+        font-size: 2rem;
+        color: variable.$redError;
+    }
+}
