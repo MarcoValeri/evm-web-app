@@ -2,10 +2,14 @@ import "./Main.scss";
 
 import FacebookOfficialLogoSmall from "../../images/facebook-official-logo-small.png";
 
-const Main = ({children}: {children: React.ReactNode}) => {
+type Props = {
+    children: React.ReactNode;
+}
+
+const Main = (props: Props) => {
     return (
         <main className="main">
-            <div className="main__container-content">{children}</div>
+            <div className="main__container-content">{props.children}</div>
             <aside className="main__container-sidebar">
                 <div className="main__container-sidebar-single-menu">
                     <h2 className="h2">Segui <em>Eventi Vicino a Me</em> su:</h2>

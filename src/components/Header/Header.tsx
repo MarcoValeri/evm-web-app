@@ -19,7 +19,6 @@ const Header = ({ pageTitle }: {pageTitle: string}) => {
                 </a>
             </div>
             <Breadcrumb />
-            {/* <nav aria-label="Breadcrumb" className="breadcrumb">{{template "breadcrumb" .}}</nav> */}
         </header>
     )
 }

@@ -1,3 +1,43 @@
+@use "../../assets/scss/abstract/mixins" as mixins; 
+
 .home {
-    border: 1px solid #d00;
+    padding: 5rem;
+
+    @include mixins.respond("md") {
+        padding: 5rem 1rem;
+    }
+
+    &__container-section {
+        margin-bottom: 5rem;
+    }
+
+    &__container-title {
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+
+    &__container-category {
+        display: flex;
+        justify-content: center;
+        column-gap: 5rem;
+
+        @include mixins.respond("lg") {
+            flex-direction: column;
+            row-gap: 5rem;
+        }
+    }
+
+    &__card-article {
+        margin-bottom: 5rem;
+    }
+
+    &__container-no-found {
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+
+    &__container-button {
+        text-align: center;
+        padding-bottom: 5rem;
+    }
 }
