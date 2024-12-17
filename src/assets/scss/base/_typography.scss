@@ -1,0 +1,175 @@
+@use "../abstract/variables" as variable;
+
+// Button
+.button {
+    color: variable.$black;
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 2rem;
+    transition: all .2s;
+    border: 2px solid variable.$greenEVM;
+    border-radius: 5px;
+
+    &:hover {
+        box-shadow: 5px 10px variable.$greenEVM;
+    }
+}
+
+// Content tags
+.h1 {
+    font-size: 4rem;
+}
+
+.h2 {
+    font-size: 3.5rem;
+}
+
+.h3 {
+    font-size: 3rem;
+}
+
+.h4 {
+    font-size: 2.5rem;
+}
+
+.p-xl {
+    font-size: 2.3rem;
+}
+
+.p-lg {
+    font-size: 2rem;
+}
+
+.p-md {
+    font-size: 1.8rem;
+}
+
+.p {
+    font-size: 1.6rem;
+}
+
+.p-sm {
+    font-size: 1.4rem;
+}
+
+// Form
+.input-text {
+    font-size: 2rem;
+    padding: 1rem;
+    border: 1px solid variable.$greenEVM;
+    border-radius: 5px;
+}
+
+.input-date {
+    font-size: 2rem;
+    padding: 1rem;
+    border: 1px solid variable.$greenEVM;
+    border-radius: 5px;
+}
+
+.input-select {
+    font-size: 2rem;
+    padding: 1rem;
+    border: 1px solid variable.$greenEVM;
+    border-radius: 5px;
+}
+
+.input-textarea {
+    font-size: 2rem;
+    padding: 1rem;
+    border: 1px solid variable.$greenEVM;
+    border-radius: 5px;
+}
+
+.input-submit {
+    color: variable.$black;
+    font-size: 2rem;
+    text-decoration: none;
+    background-color: variable.$white;
+    padding: 1.5rem 2rem;
+    transition: all .2s;
+    border: 2px solid variable.$greenEVM;
+    border-radius: 5px;
+
+    &:hover {
+        box-shadow: 5px 10px variable.$greenEVM;
+    }
+}
+
+.input-error {
+    color: variable.$redError;
+}
+
+// Link
+.link {
+    color: #00d;
+}
+
+.link-content {
+    color: #197278;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.link-no {
+    color: #000;
+    text-decoration: none;
+}
+
+.link-effect-load {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: variable.$black;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: variable.$greenEVM;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    &:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+}
+
+.link-mark {
+    display: inline-block;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(1);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: variable.$greenEVM;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+}
+
+// List
+.list-ul-ol-menu {
+    margin-top: 1rem;
+    margin-left: 3rem;
+}
+
+.list-item {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
