@@ -1,11 +1,15 @@
+import ArticleCard from "../../components/ArticleCard/ArticleCard";
 import CategoryCard from "../../components/CategoryCard/CategoryCard";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import Main from "../../components/Main/Main";
 
+import { SAGRE } from "../../data/sagre";
+
 import "./Home.scss";
 
 const Home = () => {
+    console.log(SAGRE);
     return (
         <>
             <Header pageTitle="Eventi vicino a me: oggi, domani e nel fine settimana" />
@@ -29,6 +33,29 @@ const Home = () => {
                                 categoryCardDescription="Rimani aggiornato con le ultime novità"
                             />
                         </div>
+                    </div>
+                    <div className="home__container-section">
+                        <div className="home__container-title">
+                            <h2 className="h2">Le ultime sagre ti <em>Eventi Vicino a Me</em></h2>
+                        </div>
+                        {
+                        SAGRE
+                        ?
+                        SAGRE.map(
+                            (sagra, index) => <ArticleCard
+                                    key={index} 
+                                    articleCardTitle={sagra.sagraTitle}
+                                    articleCardDescription={sagra.sagraDescription}
+                                    articleCardUrl={sagra.sagraURL}
+                                    articleImageUrl={sagra.sagraImageUrl}
+                                    articleImageAlt={sagra.sagraImageAlt}
+                                    />
+                        )
+                        :
+                        <div className="home__container-no-found">
+                            <h4 className="h4">Nessuna sagra disponibile al momento</h4>
+                        </div>
+                        }
                     </div>
                 </div>
             </Main>
